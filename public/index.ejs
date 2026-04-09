@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="fr" data-fr-scheme="system">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta
+			name="format-detection"
+			content="telephone=no,date=no,address=no,email=no,url=no"
+		/>
+		<meta name="theme-color" content="#000091" />
+		<title>Maintenance en cours — ProConnect</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.11.2/dist/dsfr.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.11.2/dist/utility/utility.min.css"
+		/>
+		<link rel="stylesheet" href="/style.css" />
+	</head>
+	<body class="layout-connexion">
+		<!-- EN-TÊTE -->
+
+		<header role="banner" class="fr-header">
+			<div class="fr-header__body">
+				<div class="fr-container">
+					<div class="fr-header__body-row">
+						<div class="fr-header__brand fr-enlarge-link">
+							<div class="fr-header__brand-top">
+								<div class="fr-header__logo">
+									<p class="fr-logo">
+										République
+										<br aria-hidden="true" />Française
+									</p>
+								</div>
+								<div class="fr-header__navbar">
+									<button
+										class="fr-btn--menu fr-btn"
+										data-fr-opened="false"
+										aria-controls="menu-modal"
+										aria-haspopup="menu"
+										id="open-menu-button"
+										title="Menu"
+									>
+										Menu
+									</button>
+								</div>
+							</div>
+							<div class="fr-header__service">
+								<a href="/" title="Accueil - ProConnect">
+									<p class="fr-header__service-title">
+										<span>
+											<img
+												src="/dist/proconnect-logo.svg"
+												alt=""
+												aria-hidden="true"
+												class="fr-mr-1w"
+											/>
+										</span>
+										ProConnect
+									</p>
+								</a>
+							</div>
+						</div>
+						<div class="fr-header__tools">
+							<div class="fr-header__tools-links">
+								<ul class="fr-btns-group">
+									<li>
+										<a
+											class="fr-btn fr-btn--sm fr-btn--tertiary-no-outline fr-icon-information-fill fr-btn--icon-left"
+											href="https://proconnect.crisp.help/fr/"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											Aide
+										</a>
+									</li>
+									<% if (locals.use_dashboard_layout &&
+									locals.header_user_label) { %>
+									<li>
+										<a
+											class="fr-btn fr-btn--sm fr-btn--tertiary-no-outline fr-fi-logout-box-r-line fr-btn--icon-left"
+											href="/oauth/logout"
+											aria-label="Se déconnecter - <%= header_user_label; %>"
+										>
+											<%= header_user_label; %>
+										</a>
+									</li>
+									<% } %>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div
+				class="fr-header__menu fr-modal"
+				id="menu-modal"
+				aria-labelledby="open-menu-button"
+			>
+				<div class="fr-container">
+					<button
+						class="fr-btn--close fr-btn"
+						aria-controls="menu-modal"
+						title="Fermer"
+					>
+						Fermer
+					</button>
+					<div class="fr-header__menu-links"></div>
+				</div>
+			</div>
+		</header>
+
+		<!-- CONTENU PRINCIPAL -->
+		<main role="main" id="content" class="main-connexion">
+			<div class="fr-container fr-my-8w">
+				<div class="fr-grid-row fr-grid-row--gutters fr-grid-row--middle">
+					<!-- Colonne gauche : texte -->
+					<div class="fr-col-12 fr-col-md-6">
+						<h1 class="fr-h2">Site en maintenance</h1>
+						<p>
+							ProConnect est en maintenance ce <%= locals.maintenanceDate %>. Nous prévoyons une durée d’indisponibilité d’au moins <%= locals.maintenanceDuration %>. 
+						</p>
+						<p>
+							Merci de patienter et de rafraîchir la page ultérieurement.
+						</p>
+					</div>
+					<!-- Colonne droite : illustration -->
+					<div class="fr-col-12 fr-col-md-6" style="display: flex; justify-content: center; align-items: center;">
+						<img
+							src="/images/illu-time.svg"
+							alt=""
+							style="max-width: 340px; width: 100%; height: auto;"
+						/>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- PIED DE PAGE -->
+		<footer class="fr-footer" role="contentinfo" id="footer">
+			<div class="fr-container">
+				<div class="fr-footer__body">
+					<div class="fr-footer__brand fr-enlarge-link">
+						<a href="/" title="Accueil — ProConnect">
+							<p class="fr-logo">République<br />Française</p>
+						</a>
+					</div>
+					<div class="fr-footer__content">
+						<p class="fr-footer__content-desc">
+							ProConnect est le service d'identification des
+							agents publics.
+						</p>
+						<ul class="fr-footer__content-list">
+							<li class="fr-footer__content-item">
+								<a
+									class="fr-footer__content-link"
+									href="https://legifrance.gouv.fr"
+									target="_blank"
+									rel="noopener external"
+									title="legifrance.gouv.fr - nouvelle fenêtre"
+									>legifrance.gouv.fr</a
+								>
+							</li>
+							<li class="fr-footer__content-item">
+								<a
+									class="fr-footer__content-link"
+									href="https://info.gouv.fr"
+									target="_blank"
+									rel="noopener external"
+									title="info.gouv.fr - nouvelle fenêtre"
+									>info.gouv.fr</a
+								>
+							</li>
+							<li class="fr-footer__content-item">
+								<a
+									class="fr-footer__content-link"
+									href="https://service-public.gouv.fr"
+									target="_blank"
+									rel="noopener external"
+									title="service-public.gouv.fr - nouvelle fenêtre"
+									>service-public.gouv.fr</a
+								>
+							</li>
+							<li class="fr-footer__content-item">
+								<a
+									class="fr-footer__content-link"
+									href="https://data.gouv.fr"
+									target="_blank"
+									rel="noopener external"
+									title="data.gouv.fr - nouvelle fenêtre"
+									>data.gouv.fr</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="fr-footer__bottom">
+					<ul class="fr-footer__bottom-list">
+						<li class="fr-footer__bottom-item">
+							<a class="fr-footer__bottom-link" href="#"
+								>Accessibilité : non conforme</a
+							>
+						</li>
+						<li class="fr-footer__bottom-item">
+							<a class="fr-footer__bottom-link" href="#"
+								>Mentions légales</a
+							>
+						</li>
+					</ul>
+					<div class="fr-footer__bottom-copy">
+						<p>
+							Sauf mention contraire, tous les contenus de ce site
+							sont sous
+							<a
+								href="https://github.com/etalab/licence-ouverte/blob/master/LO.md"
+								target="_blank"
+								rel="noopener external"
+								title="licence etalab-2.0 - nouvelle fenêtre"
+								>licence etalab-2.0</a
+							>
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.11.2/dist/dsfr.module.min.js"
+			type="module"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.11.2/dist/dsfr.nomodule.min.js"
+			nomodule
+		></script>
+	</body>
+</html>

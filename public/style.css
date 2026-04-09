@@ -1,0 +1,56 @@
+/* Common footer management at the bottom for all layouts */
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex-grow: 1;
+}
+
+/* Connection page layout */
+@media all and (min-width: 768px) and (max-width: 991px) {
+	.layout-connexion .main-connexion {
+		min-height: calc(100vh - 171.1px);
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media all and (min-width: 992px) {
+	.layout-connexion .main-connexion {
+		min-height: calc(100vh - 84.5px);
+		display: flex;
+		align-items: center;
+	}
+}
+
+/* Customise the header title */
+.fr-header__service-title {
+	display: flex;
+	align-items: center;
+	color: var(--text-action-high-blue-france);
+}
+
+/* Delete the shadow and reduces the size of the header  */
+.fr-header {
+	background-color: transparent !important;
+	filter: none !important;
+}
+
+.fr-header__brand {
+	background-color: transparent !important;
+	filter: none !important;
+}
+
+.fr-header__body-row {
+	padding: 0.5rem 0 !important;
+}
+
+/* Customise the image size for the maintenance page */
+.fr-col-md-6 .fr-responsive-img {
+	max-width: 200px;
+	height: auto;
+}
