@@ -19,24 +19,11 @@ app.set("views", join(__dirname, "..", "public"));
 app.get(
   "/api/v2/.well-known/openid-configuration",
   async (req: Request, res: Response) => {
-    const raw = JSON.parse(
-      await fs.readFile(
-        join(__dirname, "..", "public", "openid-configuration.json"),
-        "utf-8",
-      ),
+    const content = await fs.readFile(
+      join(__dirname, "..", "public", "openid-configuration.json"),
+      "utf-8",
     );
-    const baseUrl = `${req.protocol}://${req.host}/api/v2`;
-    res.json({
-      ...raw,
-      issuer: baseUrl,
-      authorization_endpoint: `${baseUrl}/authorize`,
-      end_session_endpoint: `${baseUrl}/session/end`,
-      jwks_uri: `${baseUrl}/jwks`,
-      token_endpoint: `${baseUrl}/token`,
-      userinfo_endpoint: `${baseUrl}/userinfo`,
-      introspection_endpoint: `${baseUrl}/token/introspection`,
-      revocation_endpoint: `${baseUrl}/token/revocation`,
-    });
+    res.type("application/json").send(content);
   },
 );
 
