@@ -8,7 +8,7 @@
     "eidas3",
     "https://proconnect.gouv.fr/assurance/certification-dirigeant"
   ],
-  "authorization_endpoint": "https://fca.integ01.dev-agentconnect.fr/api/v2/authorize",
+  "authorization_endpoint": "https://auth.agentconnect.gouv.fr/api/v2/authorize",
   "claims_parameter_supported": true,
   "claims_supported": [
     "sub",
@@ -44,13 +44,13 @@
   "code_challenge_methods_supported": [
     "S256"
   ],
-  "end_session_endpoint": "https://fca.integ01.dev-agentconnect.fr/api/v2/session/end",
+  "end_session_endpoint": "https://auth.agentconnect.gouv.fr/api/v2/session/end",
   "grant_types_supported": [
     "authorization_code",
     "refresh_token"
   ],
-  "issuer": "https://fca.integ01.dev-agentconnect.fr/api/v2",
-  "jwks_uri": "https://fca.integ01.dev-agentconnect.fr/api/v2/jwks",
+  "issuer": "https://auth.agentconnect.gouv.fr/api/v2",
+  "jwks_uri": "https://auth.agentconnect.gouv.fr/api/v2/jwks",
   "authorization_response_iss_parameter_supported": true,
   "response_modes_supported": [
     "form_post",
@@ -97,7 +97,7 @@
     "ES256",
     "RS256"
   ],
-  "token_endpoint": "https://fca.integ01.dev-agentconnect.fr/api/v2/token",
+  "token_endpoint": "https://auth.agentconnect.gouv.fr/api/v2/token",
   "id_token_signing_alg_values_supported": [
     "HS256",
     "ES256",
@@ -122,7 +122,7 @@
   "request_object_encryption_enc_values_supported": [
     "A256GCM"
   ],
-  "userinfo_endpoint": "https://fca.integ01.dev-agentconnect.fr/api/v2/userinfo",
+  "userinfo_endpoint": "https://auth.agentconnect.gouv.fr/api/v2/userinfo",
   "userinfo_signing_alg_values_supported": [
     "HS256",
     "ES256",
@@ -135,7 +135,7 @@
   "userinfo_encryption_enc_values_supported": [
     "A256GCM"
   ],
-  "introspection_endpoint": "https://fca.integ01.dev-agentconnect.fr/api/v2/token/introspection",
+  "introspection_endpoint": "https://auth.agentconnect.gouv.fr/api/v2/token/introspection",
   "introspection_signing_alg_values_supported": [
     "HS256",
     "ES256",
@@ -148,7 +148,7 @@
   "introspection_encryption_enc_values_supported": [
     "A256GCM"
   ],
-  "revocation_endpoint": "https://fca.integ01.dev-agentconnect.fr/api/v2/token/revocation",
+  "revocation_endpoint": "https://auth.agentconnect.gouv.fr/api/v2/token/revocation",
   "claim_types_supported": [
     "normal"
   ]
